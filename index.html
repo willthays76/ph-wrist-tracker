@@ -13,7 +13,7 @@
     #sync-status{font-size:0.78rem;font-weight:600;}
     .help-hint{font-size:0.72rem;color:#334155;margin-top:4px;}
     .header-right{display:flex;flex-direction:column;align-items:flex-end;gap:8px;}
-    .btn-reset{font-size:0.72rem;color:#334155;background:none;border:1px solid #1e293b;border-radius:6px;padding:5px 10px;cursor:pointer;transition:color .15s,border-color .15s;}
+    .btn-reset{font-size:0.72rem;color:#334155;background:none;border:1px solid #1e293b;border-radius:6px;padding:5px 10px;cursor:pointer;}
     .btn-reset:hover{color:#94a3b8;border-color:#334155;}
     #blocked-banner{display:none;background:#1a0a0a;border:1px solid #7f1d1d;border-radius:10px;padding:12px 18px;margin-bottom:20px;font-size:0.82rem;color:#fca5a5;}
     #blocked-banner strong{color:#f87171;margin-right:8px;}
@@ -33,8 +33,8 @@
     .gauge-ring .track{fill:none;stroke-width:6;}
     .gauge-ring .fill{fill:none;stroke-width:6;stroke-linecap:round;transition:stroke-dashoffset .5s ease;}
     .gauge-ring.critical .track{stroke:#450a0a;} .gauge-ring.critical .fill{stroke:#ef4444;}
-    .gauge-ring.high .track{stroke:#431407;}    .gauge-ring.high .fill{stroke:#f97316;}
-    .gauge-ring.medium .track{stroke:#0f2a4a;}  .gauge-ring.medium .fill{stroke:#3b82f6;}
+    .gauge-ring.high .track{stroke:#431407;} .gauge-ring.high .fill{stroke:#f97316;}
+    .gauge-ring.medium .track{stroke:#0f2a4a;} .gauge-ring.medium .fill{stroke:#3b82f6;}
     .gauge-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-size:0.7rem;font-weight:700;color:#f8fafc;pointer-events:none;}
     .gauge-label{font-size:0.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:3px;}
     .gauge-label.critical{color:#fca5a5;} .gauge-label.high{color:#fdba74;} .gauge-label.medium{color:#93c5fd;}
@@ -56,8 +56,8 @@
     .phase-pct{font-size:0.72rem;color:#64748b;text-align:right;}
     .phase-section{margin-bottom:32px;}
     .phase-header{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;padding-bottom:8px;border-bottom:1px solid #1e293b;}
-    .phase-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#475569;}
-    .btn-add-task{font-size:0.72rem;color:#334155;background:none;border:1px solid #1e293b;border-radius:6px;padding:3px 9px;cursor:pointer;transition:color .15s,border-color .15s;}
+    .phase-label-text{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#475569;}
+    .btn-add-task{font-size:0.72rem;color:#334155;background:none;border:1px solid #1e293b;border-radius:6px;padding:3px 9px;cursor:pointer;}
     .btn-add-task:hover{color:#60a5fa;border-color:#2563eb;}
     .tasks{display:flex;flex-direction:column;gap:7px;}
     .task{background:#161b27;border:1px solid #1e293b;border-radius:10px;padding:13px 18px;display:grid;grid-template-columns:1fr auto;gap:14px;align-items:start;position:relative;transition:border-color .15s,background .15s;}
@@ -75,16 +75,16 @@
     .bar-critical{background:#ef4444;} .bar-high{background:#f97316;} .bar-medium{background:#3b82f6;}
     .task-right{display:flex;flex-direction:column;align-items:flex-end;gap:7px;padding-top:1px;}
     .task-actions{display:flex;gap:6px;opacity:0;transition:opacity .15s;}
-    .task-actions button{background:none;border:1px solid #1e293b;border-radius:6px;color:#475569;font-size:0.78rem;padding:3px 7px;cursor:pointer;transition:color .15s,border-color .15s;}
+    .task-actions button{background:none;border:1px solid #1e293b;border-radius:6px;color:#475569;font-size:0.78rem;padding:3px 7px;cursor:pointer;}
     .task-actions .btn-pin:hover{color:#f59e0b;border-color:#92400e;}
     .task-actions .btn-del:hover{color:#f87171;border-color:#7f1d1d;}
     .task.pinned .btn-pin{color:#f59e0b;border-color:#92400e;opacity:1;}
-    .priority{font-size:0.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:3px 9px;border-radius:20px;white-space:nowrap;cursor:pointer;transition:opacity .15s;}
+    .priority{font-size:0.66rem;font-weight:700;text-transform:uppercase;letter-spacing:.06em;padding:3px 9px;border-radius:20px;white-space:nowrap;cursor:pointer;}
     .priority:hover{opacity:.7;}
     .priority.critical{background:#450a0a;color:#fca5a5;border:1px solid #7f1d1d;}
     .priority.high{background:#431407;color:#fdba74;border:1px solid #7c2d12;}
     .priority.medium{background:#0f2a4a;color:#93c5fd;border:1px solid #1d4ed8;}
-    .status{font-size:0.73rem;font-weight:600;padding:4px 11px;border-radius:20px;white-space:nowrap;min-width:108px;text-align:center;cursor:pointer;transition:opacity .15s;}
+    .status{font-size:0.73rem;font-weight:600;padding:4px 11px;border-radius:20px;white-space:nowrap;min-width:108px;text-align:center;cursor:pointer;}
     .status:hover{opacity:.75;}
     .status.not-started{background:#1e293b;color:#64748b;border:1px solid #334155;}
     .status.in-progress{background:#0f2a4a;color:#60a5fa;border:1px solid #2563eb;}
@@ -98,7 +98,7 @@
     .add-task-cancel{background:none;border:1px solid #1e293b;border-radius:6px;color:#475569;font-size:0.75rem;padding:3px 9px;cursor:pointer;}
     .scratchpad-section{margin-top:44px;border-top:1px solid #1e293b;padding-top:28px;}
     .scratchpad-label{font-size:0.68rem;font-weight:700;text-transform:uppercase;letter-spacing:.1em;color:#475569;margin-bottom:10px;}
-    #scratchpad{width:100%;min-height:96px;background:#161b27;border:1px solid #1e293b;border-radius:10px;color:#94a3b8;font-family:inherit;font-size:0.84rem;padding:14px 16px;resize:vertical;outline:none;transition:border-color .15s;}
+    #scratchpad{width:100%;min-height:96px;background:#161b27;border:1px solid #1e293b;border-radius:10px;color:#94a3b8;font-family:inherit;font-size:0.84rem;padding:14px 16px;resize:vertical;outline:none;}
     #scratchpad:focus{border-color:#334155;color:#cbd5e1;}
     #scratchpad::placeholder{color:#1e293b;}
     footer{margin-top:32px;font-size:0.7rem;color:#1e293b;text-align:center;}
@@ -106,12 +106,28 @@
 </head>
 <body>
 
+<!-- PASSWORD GATE -->
+<div id="gate" style="position:fixed;inset:0;background:#0f1117;display:flex;align-items:center;justify-content:center;z-index:9999;">
+  <div style="background:#161b27;border:1px solid #1e293b;border-radius:16px;padding:40px 48px;text-align:center;width:300px;">
+    <div style="font-size:1.1rem;font-weight:700;color:#f1f5f9;margin-bottom:4px;">PH × Wrist</div>
+    <div style="font-size:0.78rem;color:#475569;margin-bottom:28px;">Launch Tracker</div>
+    <input id="gate-input" type="password" placeholder="Password"
+      style="width:100%;background:#0f1117;border:1px solid #1e293b;border-radius:8px;color:#e2e8f0;padding:10px 14px;font-size:0.95rem;outline:none;text-align:center;font-family:inherit;"
+      onkeydown="if(event.key==='Enter')checkGate()"/>
+    <div id="gate-error" style="color:#f87171;font-size:0.76rem;margin-top:10px;min-height:18px;"></div>
+    <button onclick="checkGate()"
+      style="margin-top:4px;width:100%;background:#0f2a4a;border:1px solid #2563eb;border-radius:8px;color:#60a5fa;font-size:0.88rem;font-weight:600;padding:10px;cursor:pointer;font-family:inherit;">
+      Enter
+    </button>
+  </div>
+</div>
+
 <header>
   <div>
     <h1>Procurement Helper × Wrist</h1>
     <div class="header-sub">
       <span id="last-updated">April 17, 2026</span>
-      <span id="sync-status" style="color:#475569">Loading...</span>
+      <span id="sync-status" style="color:#475569">Loading…</span>
     </div>
     <div class="help-hint">Click status to advance · Click priority to change · Click any text to edit · ★ pins to Today · + adds a task</div>
   </div>
@@ -169,40 +185,40 @@ const SUPA_URL = 'https://rsbddjcbmnoweakbigjb.supabase.co';
 const SUPA_KEY = 'sb_publishable_-Mo8smM35dbKgeiw_4Ayww_l0kmribJ';
 const supabase = createClient(SUPA_URL, SUPA_KEY);
 
-const CIRC = 150.8;
-const STATUSES   = ['not-started','in-progress','blocked','done'];
-const STATUS_LB  = {'not-started':'Not Started','in-progress':'In Progress','blocked':'Blocked','done':'Done'};
-const PRIORITIES = ['critical','high','medium'];
-const PRI_LB     = {'critical':'Critical','high':'High','medium':'Medium'};
+const AUTH_KEY  = 'ph-wrist-auth-v1';
+const PASS_HASH = 'T25lV3Jpc3Q=';
 
-const DEFAULT_DATA = {
-  version:2, scratchpad:'', lastUpdated:'April 17, 2026',
+const CIRC=150.8;
+const STATUSES  =['not-started','in-progress','blocked','done'];
+const STATUS_LB ={'not-started':'Not Started','in-progress':'In Progress','blocked':'Blocked','done':'Done'};
+const PRIORITIES=['critical','high','medium'];
+const PRI_LB    ={'critical':'Critical','high':'High','medium':'Medium'};
+
+const DEFAULT_DATA={
+  version:2,scratchpad:'',lastUpdated:'April 17, 2026',
   phases:[
-    {id:'p0',label:'Phase 0 — Strategic Framing',colorClass:'ph-0',tasks:[
+    {id:'p0',label:'Phase 0 — Strategic Framing',tasks:[
       {id:'t0',name:'Frame PHW inside TOM / CONNECT 2029',meta:'Owner: Will · Strategic positioning',
        note:'Mikkel\'s key insight (April 9): approach via operating model initiative, not IT directly. Core mantra: "1 Task, 1 Process, 1 Tool, 1 Wrist." TOM language already in the video script — use it everywhere.',
-       priority:'medium',status:'in-progress',initProgress:40,pinned:false,completedAt:null}
-    ]},
-    {id:'p1',label:'Phase 1 — Pre-Approval',colorClass:'ph-1',tasks:[
+       priority:'medium',status:'in-progress',initProgress:40,pinned:false,completedAt:null}]},
+    {id:'p1',label:'Phase 1 — Pre-Approval',tasks:[
       {id:'t1',name:'Align with Michael Hedeman',meta:'Owner: Will · Blocks all downstream approvals',
-       note:'Michael hasn\'t been briefed on this Line/Mikkel collaboration yet. Will held off during his time off — but this is the unlock. Line\'s plan requires his sign-off before anything moves.',
+       note:'Michael hasn\'t been briefed on this Line/Mikkel collaboration yet. This is the unlock — Line\'s plan requires his sign-off before anything moves.',
        priority:'critical',status:'not-started',initProgress:0,pinned:false,completedAt:null},
       {id:'t2',name:'Clarify IT compliance requirements',meta:'Owner: Will + Wrist IT',
        note:'IT said "must be involved with all coding for full compliance" — but compliance is undefined. Data residency? Vendor onboarding? Code audit? Answer determines prototype scope and timeline.',
-       priority:'critical',status:'not-started',initProgress:0,pinned:false,completedAt:null}
-    ]},
-    {id:'p2',label:'Phase 2 — Demo Prep',colorClass:'ph-2',tasks:[
-      {id:'t3',name:'Record RAPID deck demo video',meta:'Owner: Will · 5–10 min max · Cmd+Shift+5',
-       note:'Script at ~/Desktop/W/PHW_Intro_Video_Script.md. Flow: Opening (60s) → PAL → RAPID Deck → KPI Scorecard → TA Maintenance → VALUE SLIDE ($164K team + $978K contracted + $108K NWC) → "One task. One process. One tool. One Wrist."',
+       priority:'critical',status:'not-started',initProgress:0,pinned:false,completedAt:null}]},
+    {id:'p2',label:'Phase 2 — Demo Prep',tasks:[
+      {id:'t3',name:'Record RAPID deck demo video',meta:'Owner: Will · 5–10 min · Cmd+Shift+5',
+       note:'Script at ~/Desktop/W/PHW_Intro_Video_Script.md. Flow: Opening → PAL → RAPID Deck → KPI Scorecard → TA Maintenance → VALUE SLIDE ($164K team + $978K contracted + $108K NWC) → "One task. One process. One tool. One Wrist."',
        priority:'high',status:'in-progress',initProgress:30,pinned:false,completedAt:null},
       {id:'t4',name:'Download v2 template from Line\'s email',meta:'Owner: Will',
        note:'01. All Inclusive RAPID Framework_Template_v2.pptx — linked in Line\'s email. Separate from Signe\'s official 61-slide template. Inspect slide count + structure before wiring up.',
        priority:'high',status:'not-started',initProgress:0,pinned:false,completedAt:null},
       {id:'t5',name:'Connect v2 template to PHW engine',meta:'Owner: Will · PH-Web-WSC repo',
-       note:'Tokenize v2 with ##token## format. Existing engine (rapid_pptx_engine.py) handles 244 tokens via VendorContext. Check think-cell OLE objects. Frederick will notice wrong colors/alignment.',
-       priority:'high',status:'not-started',initProgress:0,pinned:false,completedAt:null}
-    ]},
-    {id:'p3',label:'Phase 3 — Dev Backlog (PHW-Web)',colorClass:'ph-3',tasks:[
+       note:'Tokenize v2 with ##token## format. Existing engine handles 244 tokens via VendorContext. Check think-cell OLE objects. Frederick will notice wrong colors/alignment.',
+       priority:'high',status:'not-started',initProgress:0,pinned:false,completedAt:null}]},
+    {id:'p3',label:'Phase 3 — Dev Backlog (PHW-Web)',tasks:[
       {id:'t6',name:'Extend OOXML charts: slides 2–30',meta:'Owner: Will · chart_gen.py',
        note:'Only slide 25 done with native OOXML. 29 more: chart_spend_development, category_split, spend_share, top_items_bar, missed_opportunity. Colors fixed to Wrist palette (April 13).',
        priority:'high',status:'in-progress',initProgress:5,pinned:false,completedAt:null},
@@ -219,27 +235,37 @@ const DEFAULT_DATA = {
        note:'Demo video use case 3: auto-load expiry report → triage → batch renew one-click → let-expire cleanup. Must be presentation-ready.',
        priority:'medium',status:'not-started',initProgress:0,pinned:false,completedAt:null},
       {id:'t11',name:'KPI Config Tool for Lena',meta:'Owner: Will · PH-Web-WSC repo',
-       note:'Extract hardcoded KPI thresholds to JSON. Build Lena-facing config UI — KPI targets, vendor exclusions (10069+11385), WSOC/CSA definitions — without touching Python.',
-       priority:'medium',status:'not-started',initProgress:0,pinned:false,completedAt:null}
-    ]},
-    {id:'p4',label:'Phase 4 — Approval',colorClass:'ph-4',tasks:[
+       note:'Extract hardcoded KPI thresholds to JSON. Build Lena-facing config UI — targets, vendor exclusions (10069+11385), WSOC/CSA — without touching Python.',
+       priority:'medium',status:'not-started',initProgress:0,pinned:false,completedAt:null}]},
+    {id:'p4',label:'Phase 4 — Approval',tasks:[
       {id:'t12',name:'Prototype approval meeting',meta:'Owner: Will + Line + Mikkel · Attendees: Michael, Martin, Frederik, IT',
-       note:'Frederik is Head of Procurement Excellence — fixates on visual fidelity. Lead with TOM language. Golden pitch: PHW doesn\'t just track KPIs — it tells you what to do, does the work, proves it moved the needle. Blocked on Phase 1.',
-       priority:'critical',status:'blocked',initProgress:0,pinned:false,completedAt:null}
-    ]},
-    {id:'p5',label:'Phase 5 — Prototype',colorClass:'ph-5',tasks:[
+       note:'Frederik (Head of Procurement Excellence) fixates on visual fidelity. Lead with TOM language. Golden pitch: PHW tells you what to do, does the work, proves it moved the needle. Blocked on Phase 1.',
+       priority:'critical',status:'blocked',initProgress:0,pinned:false,completedAt:null}]},
+    {id:'p5',label:'Phase 5 — Prototype',tasks:[
       {id:'t13',name:'Define prototype scope',meta:'Owner: Will + Line + Mikkel',
        note:'Negotiation Deck creator is the agreed starting point — no alternative in Wrist\'s toolset. Scope narrow enough to win fast.',
        priority:'medium',status:'blocked',initProgress:0,pinned:false,completedAt:null},
       {id:'t14',name:'IT-Project alignment kickoff',meta:'Owner: Will + Line + Mikkel + IT',
-       note:'IT must be involved with all coding from this point. Frame as TOM/CONNECT 2029 strategic infrastructure. All coding goes through them — formal kickoff.',
-       priority:'medium',status:'blocked',initProgress:0,pinned:false,completedAt:null}
-    ]}
+       note:'IT must be involved with all coding from this point. Frame as TOM/CONNECT 2029 strategic infrastructure — not a one-off tool.',
+       priority:'medium',status:'blocked',initProgress:0,pinned:false,completedAt:null}]}
   ]
 };
 
 let data;
 let saveTimer;
+
+function checkGate() {
+  const val = document.getElementById('gate-input').value;
+  if (btoa(val) === PASS_HASH) {
+    localStorage.setItem(AUTH_KEY, '1');
+    document.getElementById('gate').style.display = 'none';
+    initApp();
+  } else {
+    document.getElementById('gate-error').textContent = 'Wrong password';
+    document.getElementById('gate-input').value = '';
+    document.getElementById('gate-input').focus();
+  }
+}
 
 async function loadFromSupabase() {
   try {
@@ -253,7 +279,7 @@ async function saveToSupabase() {
   data.lastUpdated = new Date().toLocaleDateString('en-US',{month:'long',day:'numeric',year:'numeric'});
   document.getElementById('last-updated').textContent = data.lastUpdated;
   setSyncStatus('saving');
-  const { error } = await supabase.from('tracker_state').upsert({id:'main', data, updated_at: new Date().toISOString()});
+  const { error } = await supabase.from('tracker_state').upsert({id:'main',data,updated_at:new Date().toISOString()});
   setSyncStatus(error ? 'error' : 'synced');
 }
 
@@ -265,203 +291,187 @@ function debouncedSave() {
 
 function setSyncStatus(s) {
   const el = document.getElementById('sync-status');
-  const msgs   = {loading:'Loading…',saving:'Saving…',synced:'✓ Synced',error:'✗ Save failed'};
-  const colors = {loading:'#475569',saving:'#60a5fa',synced:'#4ade80',error:'#f87171'};
-  el.textContent = msgs[s]; el.style.color = colors[s];
+  const msgs  ={loading:'Loading…',saving:'Saving…',synced:'✓ Synced',error:'✗ Save failed'};
+  const colors={loading:'#475569',saving:'#60a5fa',synced:'#4ade80',error:'#f87171'};
+  el.textContent=msgs[s]; el.style.color=colors[s];
 }
 
-function allTasks() { return data.phases.flatMap(p => p.tasks); }
-function getTask(id) { return allTasks().find(t => t.id === id); }
-function getPhase(id) { return data.phases.find(p => p.id === id); }
-function getTaskPhase(taskId) { return data.phases.find(p => p.tasks.some(t => t.id === taskId)); }
-function uid() { return 't' + Date.now().toString(36); }
+function allTasks(){return data.phases.flatMap(p=>p.tasks);}
+function getTask(id){return allTasks().find(t=>t.id===id);}
+function getPhase(id){return data.phases.find(p=>p.id===id);}
+function getTaskPhase(id){return data.phases.find(p=>p.tasks.some(t=>t.id===id));}
+function uid(){return 't'+Date.now().toString(36);}
 
-function cycleStatus(id, e) {
-  e && e.stopPropagation();
-  const t = getTask(id);
-  const i = STATUSES.indexOf(t.status);
-  t.status = STATUSES[(i+1) % STATUSES.length];
-  if (t.status === 'done') t.completedAt = new Date().toISOString(); else t.completedAt = null;
-  debouncedSave(); render();
+function cycleStatus(id,e){
+  e&&e.stopPropagation();
+  const t=getTask(id),i=STATUSES.indexOf(t.status);
+  t.status=STATUSES[(i+1)%STATUSES.length];
+  if(t.status==='done')t.completedAt=new Date().toISOString();else t.completedAt=null;
+  debouncedSave();render();
 }
-
-function cyclePriority(id, e) {
-  e && e.stopPropagation();
-  const t = getTask(id);
-  t.priority = PRIORITIES[(PRIORITIES.indexOf(t.priority)+1) % PRIORITIES.length];
-  debouncedSave(); render();
+function cyclePriority(id,e){
+  e&&e.stopPropagation();
+  const t=getTask(id);
+  t.priority=PRIORITIES[(PRIORITIES.indexOf(t.priority)+1)%PRIORITIES.length];
+  debouncedSave();render();
 }
-
-function togglePin(id, e) {
-  e && e.stopPropagation();
-  const t = getTask(id); t.pinned = !t.pinned;
-  debouncedSave(); render();
+function togglePin(id,e){
+  e&&e.stopPropagation();
+  const t=getTask(id);t.pinned=!t.pinned;
+  debouncedSave();render();
 }
-
-function deleteTask(id, e) {
-  e && e.stopPropagation();
-  const t = getTask(id);
-  if (!confirm('Delete "' + t.name + '"?')) return;
-  const phase = getTaskPhase(id);
-  phase.tasks = phase.tasks.filter(x => x.id !== id);
-  debouncedSave(); render();
+function deleteTask(id,e){
+  e&&e.stopPropagation();
+  const t=getTask(id);
+  if(!confirm('Delete "'+t.name+'"?'))return;
+  getTaskPhase(id).tasks=getTaskPhase(id).tasks.filter(x=>x.id!==id);
+  debouncedSave();render();
 }
-
-function startEdit(el, id, field, e) {
-  e && e.stopPropagation();
-  el.contentEditable = 'true'; el.focus();
-  const sel = window.getSelection(), range = document.createRange();
-  range.selectNodeContents(el); sel.removeAllRanges(); sel.addRange(range);
-  function finish() {
-    el.contentEditable = 'false';
-    const t = getTask(id);
-    if (t) { t[field] = el.textContent.trim() || t[field]; }
+function startEdit(el,id,field,e){
+  e&&e.stopPropagation();
+  el.contentEditable='true';el.focus();
+  const sel=window.getSelection(),range=document.createRange();
+  range.selectNodeContents(el);sel.removeAllRanges();sel.addRange(range);
+  function finish(){
+    el.contentEditable='false';
+    const t=getTask(id);if(t){t[field]=el.textContent.trim()||t[field];}
     debouncedSave();
-    el.removeEventListener('blur', finish); el.removeEventListener('keydown', onKey);
+    el.removeEventListener('blur',finish);el.removeEventListener('keydown',onKey);
   }
-  function onKey(ev) {
-    if (ev.key === 'Enter' && field === 'name') { ev.preventDefault(); finish(); }
-    if (ev.key === 'Escape') { el.textContent = getTask(id)[field]; finish(); }
+  function onKey(ev){
+    if(ev.key==='Enter'&&field==='name'){ev.preventDefault();finish();}
+    if(ev.key==='Escape'){el.textContent=getTask(id)[field];finish();}
     ev.stopPropagation();
   }
-  el.addEventListener('blur', finish); el.addEventListener('keydown', onKey);
+  el.addEventListener('blur',finish);el.addEventListener('keydown',onKey);
 }
-
-function showAddTask(phaseId) {
-  const existing = document.getElementById('add-row-' + phaseId);
-  if (existing) { existing.remove(); return; }
-  const container = document.getElementById('tasks-' + phaseId);
-  const row = document.createElement('div');
-  row.className = 'add-task-row'; row.id = 'add-row-' + phaseId;
-  row.innerHTML = '<input class="add-task-input" id="add-input-' + phaseId + '" placeholder="Task name..." />'
-    + '<select class="add-task-select" id="add-pri-' + phaseId + '"><option value="medium">Medium</option><option value="high">High</option><option value="critical">Critical</option></select>'
-    + '<button class="add-task-confirm" onclick="confirmAdd(\'' + phaseId + '\')" >Add</button>'
-    + '<button class="add-task-cancel" onclick="document.getElementById(\'add-row-' + phaseId + '\').remove()">&#x2715;</button>';
+function showAddTask(phaseId){
+  const ex=document.getElementById('add-row-'+phaseId);if(ex){ex.remove();return;}
+  const container=document.getElementById('tasks-'+phaseId);
+  const row=document.createElement('div');
+  row.className='add-task-row';row.id='add-row-'+phaseId;
+  row.innerHTML='<input class="add-task-input" id="add-input-'+phaseId+'" placeholder="Task name..."/>'
+    +'<select class="add-task-select" id="add-pri-'+phaseId+'"><option value="medium">Medium</option><option value="high">High</option><option value="critical">Critical</option></select>'
+    +'<button class="add-task-confirm" onclick="confirmAdd(\''+phaseId+'\')" >Add</button>'
+    +'<button class="add-task-cancel" onclick="document.getElementById(\'add-row-'+phaseId+'\').remove()">×</button>';
   container.appendChild(row);
-  setTimeout(() => document.getElementById('add-input-' + phaseId).focus(), 30);
-  document.getElementById('add-input-' + phaseId).addEventListener('keydown', ev => {
-    if (ev.key === 'Enter') confirmAdd(phaseId);
-    if (ev.key === 'Escape') row.remove();
+  setTimeout(()=>document.getElementById('add-input-'+phaseId).focus(),30);
+  document.getElementById('add-input-'+phaseId).addEventListener('keydown',ev=>{
+    if(ev.key==='Enter')confirmAdd(phaseId);
+    if(ev.key==='Escape')row.remove();
   });
 }
-
-function confirmAdd(phaseId) {
-  const nameEl = document.getElementById('add-input-' + phaseId);
-  const priEl  = document.getElementById('add-pri-' + phaseId);
-  const name   = nameEl.value.trim(); if (!name) return;
-  getPhase(phaseId).tasks.push({id:uid(),name,meta:'Owner: Will',note:'',priority:priEl.value,status:'not-started',initProgress:0,pinned:false,completedAt:null});
-  debouncedSave(); render();
+function confirmAdd(phaseId){
+  const n=document.getElementById('add-input-'+phaseId).value.trim();if(!n)return;
+  const p=document.getElementById('add-pri-'+phaseId).value;
+  getPhase(phaseId).tasks.push({id:uid(),name:n,meta:'Owner: Will',note:'',priority:p,status:'not-started',initProgress:0,pinned:false,completedAt:null});
+  debouncedSave();render();
+}
+function resetData(){
+  if(!confirm('Reset to defaults? All changes will be lost.'))return;
+  data=JSON.parse(JSON.stringify(DEFAULT_DATA));
+  saveToSupabase();render();
 }
 
-function resetData() {
-  if (!confirm('Reset to defaults? All changes will be lost.')) return;
-  data = JSON.parse(JSON.stringify(DEFAULT_DATA));
-  saveToSupabase(); render();
-}
+function render(){renderAlerts();renderToday();renderGraphs();renderPhases();renderScratchpad();}
 
-function render() {
-  renderAlerts(); renderToday(); renderGraphs(); renderPhases(); renderScratchpad();
+function renderAlerts(){
+  const blocked=allTasks().filter(t=>t.status==='blocked');
+  const banner=document.getElementById('blocked-banner');
+  if(!blocked.length){banner.style.display='none';return;}
+  banner.style.display='block';
+  banner.innerHTML='<strong>⚠ '+blocked.length+' blocked</strong>'+blocked.map(t=>'<span style="color:#94a3b8;margin-right:12px">'+esc(t.name)+'</span>').join('');
 }
-
-function renderAlerts() {
-  const blocked = allTasks().filter(t => t.status === 'blocked');
-  const banner  = document.getElementById('blocked-banner');
-  if (!blocked.length) { banner.style.display = 'none'; return; }
-  banner.style.display = 'block';
-  banner.innerHTML = '<strong>⚠ ' + blocked.length + ' blocked</strong>' +
-    blocked.map(t => '<span style="color:#94a3b8;margin-right:12px">' + esc(t.name) + '</span>').join('');
-}
-
-function renderToday() {
-  const pinned = allTasks().filter(t => t.pinned);
-  const strip  = document.getElementById('today-strip');
-  if (!pinned.length) { strip.style.display = 'none'; return; }
-  strip.style.display = 'block';
-  document.getElementById('today-tasks').innerHTML = pinned.map(t =>
-    '<div class="today-card"><div class="today-card-name">' + esc(t.name) + '</div>'
-    + '<div class="today-card-meta">' + esc(t.meta) + '</div>'
-    + '<div class="today-card-unpin" onclick="togglePin(\'' + t.id + '\')">★ unpin</div></div>'
+function renderToday(){
+  const pinned=allTasks().filter(t=>t.pinned);
+  const strip=document.getElementById('today-strip');
+  if(!pinned.length){strip.style.display='none';return;}
+  strip.style.display='block';
+  document.getElementById('today-tasks').innerHTML=pinned.map(t=>
+    '<div class="today-card"><div class="today-card-name">'+esc(t.name)+'</div>'
+    +'<div class="today-card-meta">'+esc(t.meta)+'</div>'
+    +'<div class="today-card-unpin" onclick="togglePin(\''+t.id+'\')">★ unpin</div></div>'
   ).join('');
 }
-
-function renderGraphs() {
-  const tasks = allTasks();
-  PRIORITIES.forEach(p => {
-    const all  = tasks.filter(t => t.priority === p);
-    const done = all.filter(t => t.status === 'done');
-    const pct  = all.length ? Math.round(done.length / all.length * 100) : 0;
-    document.getElementById('done-' + p).textContent  = done.length;
-    document.getElementById('total-' + p).textContent = all.length;
-    document.getElementById('pct-' + p).textContent   = pct + '%';
-    document.getElementById('fill-' + p).setAttribute('stroke-dashoffset', (CIRC*(1-pct/100)).toFixed(1));
+function renderGraphs(){
+  const tasks=allTasks();
+  PRIORITIES.forEach(p=>{
+    const all=tasks.filter(t=>t.priority===p);
+    const done=all.filter(t=>t.status==='done');
+    const pct=all.length?Math.round(done.length/all.length*100):0;
+    document.getElementById('done-'+p).textContent=done.length;
+    document.getElementById('total-'+p).textContent=all.length;
+    document.getElementById('pct-'+p).textContent=pct+'%';
+    document.getElementById('fill-'+p).setAttribute('stroke-dashoffset',(CIRC*(1-pct/100)).toFixed(1));
   });
-  document.getElementById('phase-bar-grid').innerHTML = data.phases.map((ph,i) => {
-    const done  = ph.tasks.filter(t => t.status === 'done').length;
-    const total = ph.tasks.length;
-    const pct   = total ? Math.round(done/total*100) : 0;
-    return '<div class="phase-bar-row ph-' + i + '">'
-      + '<div class="phase-name">' + esc(ph.label.replace(/Phase \d+ — /,'')) + '</div>'
-      + '<div class="phase-track"><div class="phase-fill" style="width:' + pct + '%"></div></div>'
-      + '<div class="phase-pct">' + pct + '%</div></div>';
+  document.getElementById('phase-bar-grid').innerHTML=data.phases.map((ph,i)=>{
+    const done=ph.tasks.filter(t=>t.status==='done').length;
+    const total=ph.tasks.length;
+    const pct=total?Math.round(done/total*100):0;
+    return '<div class="phase-bar-row ph-'+i+'"><div class="phase-name">'+esc(ph.label.replace(/Phase \d+ — /,''))+'</div>'
+      +'<div class="phase-track"><div class="phase-fill" style="width:'+pct+'%"></div></div>'
+      +'<div class="phase-pct">'+pct+'%</div></div>';
   }).join('');
 }
-
-function renderPhases() {
-  document.getElementById('phases-container').innerHTML = data.phases.map(ph =>
+function renderPhases(){
+  document.getElementById('phases-container').innerHTML=data.phases.map(ph=>
     '<div class="phase-section">'
-    + '<div class="phase-header"><div class="phase-label">' + esc(ph.label) + '</div>'
-    + '<button class="btn-add-task" onclick="showAddTask(\'' + ph.id + '\')">+ Add task</button></div>'
-    + '<div class="tasks" id="tasks-' + ph.id + '">'
-    + ph.tasks.map(renderTask).join('')
-    + '</div></div>'
+    +'<div class="phase-header"><div class="phase-label-text">'+esc(ph.label)+'</div>'
+    +'<button class="btn-add-task" onclick="showAddTask(\''+ph.id+'\')" >+ Add task</button></div>'
+    +'<div class="tasks" id="tasks-'+ph.id+'">'+ph.tasks.map(renderTask).join('')+'</div></div>'
   ).join('');
 }
-
-function renderTask(t) {
-  const prog   = t.status === 'in-progress' ? t.initProgress : t.status === 'done' ? 100 : 0;
-  const doneCls= t.status === 'done' ? ' done' : '';
-  const pinCls = t.pinned ? ' pinned' : '';
-  const pinActive = t.pinned ? 'style="color:#f59e0b;border-color:#92400e;opacity:1"' : '';
-  const noteHtml = t.note
-    ? '<div class="task-note" contenteditable="false" onclick="startEdit(this,\'' + t.id + '\',\'note\',event)">' + esc(t.note) + '</div>'
-    : '<div class="task-note" style="color:#334155" contenteditable="false" onclick="startEdit(this,\'' + t.id + '\',\'note\',event)">click to add note...</div>';
-  return '<div class="task' + doneCls + pinCls + '" id="task-' + t.id + '">'
-    + '<div class="task-body">'
-    + '<div class="task-name" contenteditable="false" onclick="startEdit(this,\'' + t.id + '\',\'name\',event)">' + esc(t.name) + '</div>'
-    + '<div class="task-meta" contenteditable="false" onclick="startEdit(this,\'' + t.id + '\',\'meta\',event)">' + esc(t.meta) + '</div>'
-    + noteHtml
-    + '<div class="progress-bar-wrap"><div class="progress-bar bar-' + t.priority + '" style="width:' + prog + '%"></div></div>'
-    + '</div>'
-    + '<div class="task-right">'
-    + '<div class="task-actions">'
-    + '<button class="btn-pin" onclick="togglePin(\'' + t.id + '\',event)" title="Pin to Today" ' + pinActive + '>★</button>'
-    + '<button class="btn-del" onclick="deleteTask(\'' + t.id + '\',event)" title="Delete">×</button>'
-    + '</div>'
-    + '<div class="priority ' + t.priority + '" onclick="cyclePriority(\'' + t.id + '\',event)">' + PRI_LB[t.priority] + '</div>'
-    + '<div class="status ' + t.status + '" onclick="cycleStatus(\'' + t.id + '\',event)">' + STATUS_LB[t.status] + '</div>'
-    + '</div></div>';
+function renderTask(t){
+  const prog=t.status==='in-progress'?t.initProgress:t.status==='done'?100:0;
+  const dc=t.status==='done'?' done':'',pc=t.pinned?' pinned':'';
+  const pa=t.pinned?' style="color:#f59e0b;border-color:#92400e;opacity:1"':'';
+  const noteHtml=t.note
+    ?'<div class="task-note" contenteditable="false" onclick="startEdit(this,\''+t.id+'\',\'note\',event)">'+esc(t.note)+'</div>'
+    :'<div class="task-note" style="color:#334155" contenteditable="false" onclick="startEdit(this,\''+t.id+'\',\'note\',event)">click to add note…</div>';
+  return '<div class="task'+dc+pc+'" id="task-'+t.id+'">'
+    +'<div class="task-body">'
+    +'<div class="task-name" contenteditable="false" onclick="startEdit(this,\''+t.id+'\',\'name\',event)">'+esc(t.name)+'</div>'
+    +'<div class="task-meta" contenteditable="false" onclick="startEdit(this,\''+t.id+'\',\'meta\',event)">'+esc(t.meta)+'</div>'
+    +noteHtml
+    +'<div class="progress-bar-wrap"><div class="progress-bar bar-'+t.priority+'" style="width:'+prog+'%"></div></div>'
+    +'</div>'
+    +'<div class="task-right">'
+    +'<div class="task-actions">'
+    +'<button class="btn-pin" onclick="togglePin(\''+t.id+'\',event)" title="Pin to Today"'+pa+'>★</button>'
+    +'<button class="btn-del" onclick="deleteTask(\''+t.id+'\',event)" title="Delete">×</button>'
+    +'</div>'
+    +'<div class="priority '+t.priority+'" onclick="cyclePriority(\''+t.id+'\',event)">'+PRI_LB[t.priority]+'</div>'
+    +'<div class="status '+t.status+'" onclick="cycleStatus(\''+t.id+'\',event)">'+STATUS_LB[t.status]+'</div>'
+    +'</div></div>';
 }
-
-function renderScratchpad() {
-  const el = document.getElementById('scratchpad');
-  if (document.activeElement !== el) el.value = data.scratchpad || '';
+function renderScratchpad(){
+  const el=document.getElementById('scratchpad');
+  if(document.activeElement!==el)el.value=data.scratchpad||'';
 }
-
-function esc(s) {
+function esc(s){
   return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
 }
 
-Object.assign(window, {cycleStatus,cyclePriority,togglePin,deleteTask,startEdit,showAddTask,confirmAdd,resetData});
+Object.assign(window,{checkGate,cycleStatus,cyclePriority,togglePin,deleteTask,startEdit,showAddTask,confirmAdd,resetData});
 
-document.addEventListener('DOMContentLoaded', async () => {
+async function initApp(){
   setSyncStatus('loading');
-  data = await loadFromSupabase();
+  data=await loadFromSupabase();
   render();
   setSyncStatus('synced');
-  document.getElementById('last-updated').textContent = data.lastUpdated || 'April 17, 2026';
-  document.getElementById('scratchpad').addEventListener('input', function() {
-    data.scratchpad = this.value; debouncedSave();
+  document.getElementById('last-updated').textContent=data.lastUpdated||'April 17, 2026';
+  document.getElementById('scratchpad').addEventListener('input',function(){
+    data.scratchpad=this.value;debouncedSave();
   });
+}
+
+document.addEventListener('DOMContentLoaded',()=>{
+  if(localStorage.getItem(AUTH_KEY)==='1'){
+    document.getElementById('gate').style.display='none';
+    initApp();
+  } else {
+    setTimeout(()=>document.getElementById('gate-input').focus(),100);
+  }
 });
 </script>
 </body>
